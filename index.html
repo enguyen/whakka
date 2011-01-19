@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Whakka</title>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/whakka.js"></script>
+    <style type="text/css">
+      .container {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        overflow: hidden;
+      }
+      #mole {
+        position: absolute;
+        top: 100%;
+        bottom: -100%;
+        left: 10%;
+        right: 10%;
+        text-align: center;
+        background: url('mole3.jpg') center top;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">			
+      <div id="mole" style=""></div>
+    </div>
+    <script>
+      new Mole('#mole').start();
+    </script>
+  </body>
+</html>
