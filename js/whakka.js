@@ -3,9 +3,11 @@ var Mole = function(el) {
 		var that = {};
 
 		// Config/Init
-		el = $(el);
+		var el = $(el);
+		var scoreEl = $('#score');
 		var periodLength = 5000;
 		var showLength = 500;
+		var score = 0;
 
 		// Transforms
 		var toShown = {
@@ -59,6 +61,8 @@ var Mole = function(el) {
 						el.anim(toWhacked, 1, 'ease-out');
 						el.attr('data-whacked', 'true');
 						setTimeout(that.unWhack, 1000);
+						score += 1;
+						scoreEl.html('' + score);
 				}
 		};
 
